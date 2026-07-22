@@ -1,1 +1,3 @@
 # measurement-trainer
+
+rozsądny test
