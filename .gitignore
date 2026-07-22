@@ -1,7 +1,4 @@
-# For PCBs designed using KiCad: https://www.kicad.org/
-# Format documentation: https://kicad.org/help/file-formats/
-
-# Temporary files
+# KiCad temporary files
 *.000
 *.bak
 *.bck
@@ -14,18 +11,23 @@
 *~
 ~*
 _autosave-*
-\#auto_saved_files\#
+#auto_saved_files#
 *.tmp
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
 ~*.lck
-\#auto_saved_files#
-
-# Netlist files (exported from Eeschema)
+**/*-backups/
+**/fp-info-cache
+**/*.kicad_prl
+**/*.bak
+**/*~
+**/*.tmp
+**/*.lck
+# Netlist files
 *.net
 
-# Autorouter files (exported from Pcbnew)
+# Autorouter files
 *.dsn
 *.ses
 
@@ -33,11 +35,33 @@ fp-info-cache
 *.xml
 *.csv
 
-# Archived Backups (KiCad 6.0)
+# KiCad backups
 **/*-backups/*.zip
-
-# Local git-based history (KiCad 9.0+)
 .history
-
-# Local project settings
 *.kicad_prl
+
+# CMake / build output
+build/
+**/build/
+Firmware/build/
+Firmware/build/**
+
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+
+# Ninja
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# Pico output
+*.elf
+*.uf2
+*.bin
+*.hex
+*.map
+*.dis
+*.elf.map
